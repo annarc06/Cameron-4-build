@@ -1,0 +1,35 @@
+body {
+    display: grid;
+    grid-template-rows: auto;
+    background-color: green;
+}
+
+@media screen and (min-width: 150px) {   
+    nav ul {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+        background-color: #67cfff;
+    }
+}
+
+@media screen and (min-width:600px) {
+    body {
+        grid-template-rows: auto auto;
+        background-color: blue;
+    }
+}
+
+@media screen and (min-width: 800px) {
+    body {
+        grid-template-rows: auto auto auto;
+        background-color: purple;
+    }
+
+    .divsection p {
+        column-count: 2;
+        column-gap: 2rem;
+    }
+
+}
+
