@@ -1,52 +1,34 @@
+/* This code is by Anna Cameron */
+
+/* BASE STYLES */
+
 body {
     display: grid;
     grid-template-rows: auto;
     background-color: rgb(244, 247, 234);
     margin: 0;
-    font-size: 1rem;
+    font-size: .85rem;
     font-family: "Times New Roman", serif;
 }
 
-@media screen and (min-width: 150px) {   
-    nav ul {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 1rem;
-    }
-
-    body {
-        font-size: .85rem;
-    }
+section {
+    padding: 40px 0 20px;
+    margin: 0 10px;
+    line-height: 1.5rem;
 }
 
-@media screen and (min-width:600px) {
-    body {
-        grid-template-rows: auto auto;
-        font-size: .90rem;
-    }
-}
 
-@media screen and (min-width: 800px) {
-    body {
-        grid-template-rows: auto auto auto;
-        font-size: 1rem
-    }
-
-    .divsection p, #MoreVisits p {
-        column-count: 2;
-        column-gap: 2rem;
-    }
-
-}
-
+/* HEADER */
 
 h1 {
     text-align: center;
-    padding: 40px 0 40px 0;
+    padding: 40px 0;
     background: linear-gradient(rgb(203, 221, 236), rgb(244, 247, 234));
     margin: 0;
 }
 
+
+/* NAV */
 
 nav ul {
   display: flex;
@@ -68,12 +50,8 @@ nav a:hover {
     color: rgb(244, 247, 234);
 }
 
-section {
-    padding-top: 40px;
-    padding-bottom: 20px;
-    margin: 0 10px 0 10px;
-    line-height: 1.5rem;
-}
+
+/* CARD ROWS STYLING */
 
 .Card-row {
   display: flex;
@@ -82,11 +60,23 @@ section {
 }
 
 .Card-row section {
-  flex: 1 200px;
+  flex: 1 1 200px;
   background-color: rgb(203, 221, 236);
   padding: 15px;
   border-radius: 5px;
 }
+
+/* IMAGES */
+
+img {
+    display: block;
+    margin: 10px auto;
+    border-radius: 10px;
+    border: 1px solid rgb(244, 247, 234);
+}
+
+
+/* ASIDE */
 
 aside {
   margin: 10px;
@@ -97,15 +87,38 @@ aside ol {
     line-height: 2rem;
 }
 
+/* FOOTER */
+
 footer {
     background: rgb(203, 221, 236);
     text-align: center;
-    padding: 5px 0 5px 0;
+    padding: 5px 0;
 }
 
-img {
-    display: block;
-    margin: 10px auto;
-    border-radius: 10px;
-    border: 1px solid rgb(244, 247, 234);
+
+/* MEDIA QUERIES */
+
+/* FOR TABLETS */
+
+@media screen and (min-width: 600px) {
+    body {
+        grid-template-rows:  auto;
+        font-size: .90rem;
+    }
+}
+
+
+/* FOR DESKTOP */
+
+@media screen and (min-width: 800px) {
+    body {
+        grid-template-rows: auto;
+        font-size: 1rem;
+    }
+
+    .divsection p, #MoreVisits p {
+        column-count: 2;
+        column-gap: 2rem;
+    }
+
 }
